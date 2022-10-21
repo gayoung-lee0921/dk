@@ -48,23 +48,39 @@
       background-size: cover;
       background-position: 50%;
       background-repeat: no-repeat;
-    }
-    // for $i from 1 through 3 {}을 쓰면 1~3까지 감
-    @for $i from 1 to 4 {
-      .visual0#{$i} {
-        background-image: url("../imges/main/visual0#{$i}.jpg");
+
+      &.visual01,
+      &.visual02,
+      &.visual03 {
+        position: relative;
+        .text {
+          position: absolute;
+          width: 100%;
+          top: 50%;
+          text-align: center;
+          color: #fff;
+          z-index: 2;
+          .main {
+            font-size: 60px;
+            font-weight: 700;
+          }
+          .sub {
+            font-size: 30px;
+            line-height: 1.5;
+            margin-top: 20px;
+          }
+        }
       }
     }
-    // .visual01 {
-    //   background-image: url("../imges/main/visual01.jpg");
-    // }
-    // .visual02 {
-    //   background-image: url("../imges/main/visual02.jpg");
-    // }
-    // .visual03 {
-    //   background-image: url("../imges/main/visual03.jpg");
-    // }
   }
+
+  // for $i from 1 through 3 {}을 쓰면 1~3까지 감
+  @for $i from 1 to 4 {
+    .visual0#{$i} {
+      background-image: url("../imges/main/visual0#{$i}.jpg");
+    }
+  }
+
   .btns {
     position: absolute;
     left: 100px;
@@ -88,7 +104,7 @@
     }
   }
 }
-// 10.11
+
 #quick-menu {
   .container {
     display: flex;
@@ -146,6 +162,7 @@
 .section {
   .title-box {
     width: 340px;
+
     .title {
       h2 {
         text-transform: uppercase;
@@ -167,6 +184,7 @@
     }
     .btns {
       display: flex;
+
       .btn {
         width: 50px;
         height: 50px;

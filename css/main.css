@@ -82,13 +82,33 @@
   background-position: 50%;
   background-repeat: no-repeat;
 }
-#main-visual .list .visual01 {
+#main-visual .list li.visual01, #main-visual .list li.visual02, #main-visual .list li.visual03 {
+  position: relative;
+}
+#main-visual .list li.visual01 .text, #main-visual .list li.visual02 .text, #main-visual .list li.visual03 .text {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  text-align: center;
+  color: #fff;
+  z-index: 2;
+}
+#main-visual .list li.visual01 .text .main, #main-visual .list li.visual02 .text .main, #main-visual .list li.visual03 .text .main {
+  font-size: 60px;
+  font-weight: 700;
+}
+#main-visual .list li.visual01 .text .sub, #main-visual .list li.visual02 .text .sub, #main-visual .list li.visual03 .text .sub {
+  font-size: 30px;
+  line-height: 1.5;
+  margin-top: 20px;
+}
+#main-visual .visual01 {
   background-image: url("../imges/main/visual01.jpg");
 }
-#main-visual .list .visual02 {
+#main-visual .visual02 {
   background-image: url("../imges/main/visual02.jpg");
 }
-#main-visual .list .visual03 {
+#main-visual .visual03 {
   background-image: url("../imges/main/visual03.jpg");
 }
 #main-visual .btns {
